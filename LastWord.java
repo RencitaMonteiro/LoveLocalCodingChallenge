@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 public class LastWord {
      public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the String");
-        String str = sc.nextLine();
-        String[] strArray = str.split("\\s");
-        int length = strArray[strArray.length-1].length();
+        Scanner sc = new Scanner(System.in);  //Create object to input data 
+        System.out.println("Enter the String"); 
+        String str = sc.nextLine(); //input the string 
+        String[] strArray = str.split("\\s"); //Create array of words 
+        int length = strArray[strArray.length-1].length(); // retrive the word in last position and its length by .length() function
    
-        System.out.print("\nLength of last word '"+ strArray[strArray.length-1] + "is"+ length);
+        System.out.print("\nLength of last word '"+ strArray[strArray.length-1] + "is"+ length); //print the word  length
      }
 }
