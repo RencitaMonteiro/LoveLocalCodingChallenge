@@ -13,33 +13,33 @@ public class array {
          
         System.out.println("Enter the size of the array");
         int n = sc.nextInt();
-        int  min= n/3;
-        int[] arr = new int[n];
+        int  min= n/3; //initialize the minimum count
+        int[] arr = new int[n]; //create a array
         System.out.println("Enter the array values");
         for(int i=0;i<n;i++)
-        arr[i] = sc.nextInt();
+        arr[i] = sc.nextInt();//input the value
             
-        Arrays.sort(arr);
+        Arrays.sort(arr); //sort the array
         int j=0;
         int count=1;
-        while(j<n-1)
+        while(j<n-1)  for all content in array 
         {
 
-            if(arr[j]==arr[j+1])
+            if(arr[j]==arr[j+1]) //check if the value in current position is equal to value in next position
             {
-               count++; 
+               count++; // if thy r equal increement the counter
             }
             else
             {
-               if(count>=min)
+               if(count>=min) //print the value if it is greate than minimum requirement(n/3)
                   System.out.println("The value repeating more than n/3 number of time is " + arr[j]);
-               count=1;
+               count=1; // Re-iniliaze the counter
             }
             j++;
 
             
         }
-        if(count>=min)
+        if(count>=min) // to print if the value in the last position is greater than minimum
                   System.out.println("The value repeating more than n/3 number of time is " + arr[n-1]);          
        
     }
